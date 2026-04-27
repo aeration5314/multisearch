@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>자막 검색</title></head>
+<body>
+<script>
+  const q = new URLSearchParams(window.location.search).get("q");
+  if (q) {
+    const eq = encodeURIComponent(q);
+    window.open(`https://www.opensubtitles.org/ko/search2/moviename-${eq}/sublanguageid-kor`, "_blank");
+    window.open(`https://subdl.com/search/${eq}`, "_blank");
+    window.open(`https://cineaste.co.kr/bbs/board.php?bo_table=psd_caption&sfl=wr_subject&stx=${eq}&sop=and`, "_blank");
+    location.href = `https://sub-scene.com/search?query=${eq}`;
+  }
+</script>
+</body>
+</html>
