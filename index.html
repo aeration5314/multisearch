@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Multi Search</title></head>
+<body>
+<script>
+  const params = new URLSearchParams(location.search);
+  const q = params.get("q");
+
+  if (q) {
+    const engines = [
+      "https://www.google.com/search?q=" + encodeURIComponent(q),
+      "https://search.naver.com/search.naver?query=" + encodeURIComponent(q),
+      "https://www.bing.com/search?q=" + encodeURIComponent(q),
+    ];
+
+    // 첫 번째는 현재 탭, 나머지는 새 탭으로 열기
+    for (let i = 1; i < engines.length; i++) {
+      window.open(engines[i], "_blank");
+    }
+    location.href = engines[0];
+  } else {
+    document.body.innerText = "검색어(q=)가 없습니다.";
+  }
+</script>
+</body>
+</html>
