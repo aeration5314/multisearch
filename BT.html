@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>BT 검색</title></head>
+<body>
+<script>
+  const q = new URLSearchParams(window.location.search).get("q");
+  if (q) {
+    const eq = encodeURIComponent(q);
+    window.open(`https://knaben.org/search/${eq}`, "_blank");
+    window.open(`https://ext.to/browse/?with_adult=1&q=${eq}`, "_blank");
+    window.open(`https://damag.net/?q=${eq}`, "_blank");
+    window.open(`https://www.btdig.com/search/?q=${eq}`, "_blank");
+    window.open(`https://bt4gprx.com/search?q=${eq}`, "_blank");
+    window.open(`https://www.btsearch.love/en/search?keyword=${eq}`, "_blank");
+    window.open(`https://www.0mag.net/search?q=${eq}`, "_blank");
+    window.open(`https://www.google.com/search?q=site:https://mypikpak.com+${eq}`, "_blank");
+  }
+</script>
+</body>
+</html>
