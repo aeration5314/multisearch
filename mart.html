@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>마트 검색</title></head>
+<body>
+<script>
+  const q = new URLSearchParams(window.location.search).get("q");
+  if (q) {
+    const eq = encodeURIComponent(q);
+    window.open(`https://mfront.homeplus.co.kr/search?entry=direct&keyword=${eq}`, "_blank");
+    window.open(`https://lottemartzetta.com/products/search?q=${eq}`, "_blank");
+    location.href = `https://emart.ssg.com/search.ssg?target=all&query=${eq}&shpp=ssgem`;
+  }
+</script>
+</body>
+</html>
